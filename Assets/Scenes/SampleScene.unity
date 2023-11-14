@@ -258,6 +258,8 @@ MonoBehaviour:
   moveSpeed: 5
   rig: {fileID: 481739342}
   jumpForce: 5
+  curHp: 10
+  maxHp: 10
 --- !u!54 &481739342
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -292,7 +294,7 @@ CapsuleCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 481739339}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: 5d99d09eb3e299f469d75b2a99720d86, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -351,7 +353,7 @@ BoxCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 609731432}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: 5d99d09eb3e299f469d75b2a99720d86, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -582,7 +584,7 @@ BoxCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 781605052}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: 5d99d09eb3e299f469d75b2a99720d86, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -859,6 +861,11 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!195 &1662104483 stripped
+NavMeshAgent:
+  m_CorrespondingSourceObject: {fileID: 3323850940098097854, guid: d3b48fad78ed6da478ac74c7304f5784, type: 3}
+  m_PrefabInstance: {fileID: 2990679788851614250}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1687638490
 GameObject:
   m_ObjectHideFlags: 0
@@ -948,7 +955,7 @@ BoxCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2080130948}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: 5d99d09eb3e299f469d75b2a99720d86, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -1053,7 +1060,7 @@ BoxCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2136885069}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: 5d99d09eb3e299f469d75b2a99720d86, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -1179,6 +1186,26 @@ PrefabInstance:
     - target: {fileID: 753504983250406956, guid: d3b48fad78ed6da478ac74c7304f5784, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1787159311421922973, guid: d3b48fad78ed6da478ac74c7304f5784, type: 3}
+      propertyPath: agent
+      value: 
+      objectReference: {fileID: 1662104483}
+    - target: {fileID: 1787159311421922973, guid: d3b48fad78ed6da478ac74c7304f5784, type: 3}
+      propertyPath: damage
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1787159311421922973, guid: d3b48fad78ed6da478ac74c7304f5784, type: 3}
+      propertyPath: health
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1787159311421922973, guid: d3b48fad78ed6da478ac74c7304f5784, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 481739341}
+    - target: {fileID: 1787159311421922973, guid: d3b48fad78ed6da478ac74c7304f5784, type: 3}
+      propertyPath: attackDistance
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 9136431610926675132, guid: d3b48fad78ed6da478ac74c7304f5784, type: 3}
       propertyPath: m_Name

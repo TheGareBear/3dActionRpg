@@ -1,12 +1,15 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Player : MonoBehaviour
 {
     public float moveSpeed;
     public Rigidbody rig;
     public float jumpForce;
+    public int curHp;
+    public int maxHp;
 
     void Update()
     {
@@ -47,5 +50,17 @@ public class Player : MonoBehaviour
         }
 
         return false;
+    }
+
+    public void TakeDamage(int damageToTake)
+    {
+        curHp -= damageToTake;
+
+        // update ui health
+
+        if(curHp <= 0)
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        }
     }
 }
