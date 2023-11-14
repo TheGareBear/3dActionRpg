@@ -260,6 +260,8 @@ MonoBehaviour:
   jumpForce: 5
   curHp: 10
   maxHp: 10
+  attackRange: 0.5
+  damage: 1
 --- !u!54 &481739342
 Rigidbody:
   m_ObjectHideFlags: 0
