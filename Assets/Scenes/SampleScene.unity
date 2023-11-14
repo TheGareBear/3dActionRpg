@@ -257,6 +257,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveSpeed: 5
   rig: {fileID: 481739342}
+  jumpForce: 5
 --- !u!54 &481739342
 Rigidbody:
   m_ObjectHideFlags: 0
