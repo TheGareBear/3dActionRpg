@@ -130,6 +130,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8d95b1a3b0ebac34db2d619d8dc9e239, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  player: {fileID: 0}
+  attackDistance: 2
+  damage: 1
+  health: 5
+  agent: {fileID: 3323850940098097854}
 --- !u!136 &7488071872760797838
 CapsuleCollider:
   m_ObjectHideFlags: 0
