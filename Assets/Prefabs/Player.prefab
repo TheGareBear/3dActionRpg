@@ -106,6 +106,7 @@ MonoBehaviour:
   maxHp: 10
   attackRange: 0.5
   damage: 1
+  anim: {fileID: 3947607812433939688}
 --- !u!114 &8282884760598818148
 MonoBehaviour:
   m_ObjectHideFlags: 0

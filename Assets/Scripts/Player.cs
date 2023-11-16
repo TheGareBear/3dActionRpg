@@ -13,6 +13,8 @@ public class Player : MonoBehaviour
     public float attackRange;
     public int damage;
     private bool isAttacking;
+    public Animator anim;
+
 
     void Update()
     {
@@ -23,6 +25,9 @@ public class Player : MonoBehaviour
 
         if(Input.GetMouseButtonDown(0) && !isAttacking)
             Attack();
+
+        if(!isAttacking)
+        UpdateAnimator();
     }
 
     void Move()
@@ -73,7 +78,7 @@ public class Player : MonoBehaviour
     void Attack()
     {
         isAttacking = true;
-
+        anim.SetTrigger("Attack");
         Invoke("TryDamage", 0.7f);
         Invoke("DisableIsAttacking", 1.5f);
     }
@@ -92,5 +97,24 @@ public class Player : MonoBehaviour
     void DisableIsAttacking()
     {
         isAttacking = false;
+    }
+
+    void UpdateAnimator() 
+    {
+        anim.SetBool("MovingForwards", false);
+        anim.SetBool("MovingBackwards", false);
+        anim.SetBool("MovingLeft", false);
+        anim.SetBool("MovingRight", false);
+
+        Vector3 localVel = transform.InverseTransformDirection(rig.velocity);
+
+        if(localVel.z > 0.1f)
+            anim.SetBool("MovingForwards", true);
+        else if(localVel.z < -0.1f)
+            anim.SetBool("MovingBackwards", true);
+        else if(localVel.x > 0.1f)
+            anim.SetBool("MovingLeft", true);
+        else if(localVel.x < -0.1f)
+            anim.SetBool("MovingRight", true);
     }
 }
