@@ -68,6 +68,7 @@ public class Player : MonoBehaviour
         curHp -= damageToTake;
 
         // update ui health
+        HealthbarUI.instance.UpdateHealth(curHp, maxHp);
 
         if(curHp <= 0)
         {
