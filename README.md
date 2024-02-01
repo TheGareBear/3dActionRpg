@@ -1,2 +1,2 @@
 # 3dActionRpg
-A basic 3D Action RPG that incluldes character animations, camera orbiting, and enemy mesh mapping.
+A 3rd person Action RPG the builds upon concepts of the 3D platformer and adding animations, enemies, environments, navigation, and post processing. Created with C# using Unity
